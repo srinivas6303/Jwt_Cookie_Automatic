@@ -12,8 +12,8 @@ This project helps you understand how to secure REST APIs using **JSON Web Token
 
 | Branch | Description |
 |---------|--------------|
-| [`WithoutCookie-Manual`](https://github.com/srinivas6303/jwt-cookie-simple/tree/WithoutCookie-Manual) | Uses manual JWT handling — token is returned in response and must be manually copied to Authorization header. |
-| [`WithCookie-Automation`](https://github.com/srinivas6303/jwt-cookie-simple/tree/WithCookie-Automation) | Uses automated JWT handling — token is stored inside an HttpOnly cookie, automatically sent in each request. |
+| [`WithoutCookie-Manual`](https://github.com/srinivas6303/Jwt_Cookie_Automation/tree/WithoutCookie-manual) | Uses manual JWT handling — token is returned in response and must be manually copied to Authorization header. |
+| [`WithCookie-Automation`](https://github.com/srinivas6303/jwt_Cookie_Automation/tree/WithCookie-Automation) | Uses automated JWT handling — token is stored inside an HttpOnly cookie, automatically sent in each request. |
 
 ---
 
@@ -33,8 +33,6 @@ This project helps you understand how to secure REST APIs using **JSON Web Token
 - User logs in with `/login` (username & password).
 - Server returns a **JWT token** in the response body.
 - Client manually adds it to **Authorization header**:
-
----
 - Server verifies and grants access to protected endpoints.
 
 ---
@@ -77,11 +75,11 @@ git checkout WithoutCookie-Manual   # or WithCookie-Automation
 
 # Run the application
 mvn spring-boot:run
+```
 
 ---
 
-💡 Author
-
+## 💡 Author
 Srinivas Dappu
 Java Full Stack Developer
 Hyderabad, Telangana
