@@ -80,7 +80,7 @@ mvn spring-boot:run
 ---
 
 ## 💡 Author
-Srinivas Dappu
-Java Full Stack Developer
-Hyderabad, Telangana
-LinkedIn: https://www.linkedin.com/in/dappusrinivas/
+Srinivas Dappu<br />
+Java Full Stack Developer<br />
+Hyderabad, Telangana<br />
+LinkedIn: https://www.linkedin.com/in/dappusrinivas<br />
