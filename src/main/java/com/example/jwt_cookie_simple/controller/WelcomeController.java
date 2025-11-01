@@ -8,6 +8,6 @@ public class WelcomeController {
 
     @GetMapping("/welcome")
     public String welcome(){
-        return "Hello, Welcome to Jwt-Manual";
+        return "Hello, Welcome to Jwt-Automation";
     }
 }

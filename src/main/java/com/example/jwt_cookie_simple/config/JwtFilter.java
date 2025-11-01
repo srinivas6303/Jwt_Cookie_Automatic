@@ -1,5 +1,6 @@
 package com.example.jwt_cookie_simple.config;
 
+import com.example.jwt_cookie_simple.util.CookieUtil;
 import com.example.jwt_cookie_simple.util.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -21,6 +22,9 @@ public  class JwtFilter extends OncePerRequestFilter {
     @Autowired
     private JwtUtil jwtUtil;
 
+    @Autowired
+    private CookieUtil cookieUtil;
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
@@ -30,11 +34,10 @@ public  class JwtFilter extends OncePerRequestFilter {
             return;
         }
 
-        String authHeader=request.getHeader("Authorization");
+        String token = cookieUtil.getJwtFromCookie(request);
 
-        if(authHeader!=null && authHeader.startsWith("Bearer ")){
+        if(token!=null){
             try {
-                String token=authHeader.substring(7);
                 String username= jwtUtil.extractUsername(token);
 
                 if(username!=null && SecurityContextHolder.getContext().getAuthentication()==null){
